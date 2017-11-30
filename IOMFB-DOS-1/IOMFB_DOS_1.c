@@ -59,3 +59,11 @@ int IOMFB_DOS_1() {
     ERR("no panic");
     return 0;
 }
+
+#if STANDALONE
+
+int main() {
+	return IOMFB_DOS_1();
+}
+
+#endif
